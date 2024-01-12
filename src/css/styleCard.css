@@ -1,0 +1,123 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --bg: hsl(213, 19%, 18%);
+    --bgBtn: hsl(215, 9%, 25%);
+    --title: hsl(0, 0%, 100%);
+    --text: hsl(217, 12%, 63%);
+    --bgBtnHover: hsl(216, 12%, 54%);
+    
+    @font-face {
+        font-family: "Overpass", sans-serif;
+    }
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bgBtn);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.all-card {
+    width: 30%;
+    padding: 50px;
+    margin: auto;
+    background-color: var(--bg);
+    border-radius: 20px;
+    font-family: "Overpass", sans-serif;
+}
+
+.all-card img {
+    padding: 20px;
+    border-radius: 50%;
+    background-color: var(--bgBtn);
+    margin-bottom: 30px;
+}
+
+.title-card {
+    color: var(--title);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.text-card {
+    line-height: 27px;
+    color: var(--text);
+    margin-bottom: 50px;
+    font-size: 15px;
+    font-size: 400;
+}
+
+.btn-card {
+    width: 100%;
+    padding: 15px;
+    margin-top: 50px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background-color: var(--orange);
+    color: var(--title);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-card:hover {
+    background-color: var(--title);
+    color: var(--orange);
+}
+
+
+/* Estilos generales que se aplican a todas las pantallas */
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 80vh;
+    background-color: #ccc;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .all-card {
+        width: 90%; 
+        font-size: 14px; 
+    }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .all-card {
+        width: 70%; 
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px){
+    .all-card {
+        width: 40%; 
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (min-width: 1441px)  {
+    .all-card {
+        width: 30%;
+    }
+}
